@@ -12,8 +12,8 @@ function stripeResponseHandler(status, response) {
 
     // ADDED THESE CONSOLE LOGS TO HELP WITH DEBUGGING!
     console.log('response.error >> ');
-    console.log(response.error);
-    
+    console.log(response.error);	  
+    console.log(object.values(response.error));
     
 	
     $form.find('.payment-errors').text(response.error);
