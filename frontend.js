@@ -14,7 +14,9 @@ function stripeResponseHandler(status, response) {
     console.log('response.error >> ');
     console.log(response.error);	  
 
-    $form.find('.payment-errors').JSON.stringify(response.error);
+    var myJSON = JSON.stringify(response.error);
+    
+    $form.find('.payment-errors').text(myJSON);
   //  $form.find('.payment-errors').text(response.error);
   } else {
     var token = response.id;
