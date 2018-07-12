@@ -24,7 +24,7 @@ function stripeResponseHandler(status, response) {
       method: "POST",
       url: "/create_and_charge_customer",
       dataType: "json",
-      data: { token: token, email: "test@mailinator.com", amount: 100 }
+      data: { token: token, email: "test@mailinator.com", amount: 10000 }
     })
     .done(function(data) {
       $form.find('.payment-errors').text(data[1]);
